@@ -5,3 +5,37 @@
 
 @import 'base/reset';
 @import 'base/typography';
+main{
+    margin: 75px auto;
+    width: 328px;
+}
+.profile{
+    width: 328px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: $blue;
+    border-radius: 20px;
+    height: 133px;
+    &__avatar{
+        background: center/cover url('../../images/image-jeremy.png') no-repeat;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        outline: 3px solid white;
+    }
+    &__name{
+        h1, p {
+            margin: 0;
+
+        }
+        p{
+            font-size: $font-size*0.8;
+            color:$pale-blue;
+        }
+        h1{
+            font-weight: map-get($weight, thin );
+        }
+    }
+}

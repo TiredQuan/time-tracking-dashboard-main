@@ -1,1 +1,58 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+  background-color: #0f1424;
+  color: white;
+}
+
+main {
+  margin: 75px auto;
+  width: 328px;
+}
+
+.profile {
+  width: 328px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-color: #5847eb;
+  border-radius: 20px;
+  height: 133px;
+}
+
+.profile__avatar {
+  background: center/cover url("../../images/image-jeremy.png") no-repeat;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  outline: 3px solid white;
+}
+
+.profile__name h1, .profile__name p {
+  margin: 0;
+}
+
+.profile__name p {
+  font-size: 0.9rem;
+  color: #bdc1ff;
+}
+
+.profile__name h1 {
+  font-weight: 300;
+}
+/*# sourceMappingURL=main.css.map */
