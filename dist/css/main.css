@@ -15,6 +15,10 @@ main {
   width: 328px;
 }
 
+#profile {
+  position: inherit;
+}
+
 .profile {
   width: 328px;
   display: -webkit-box;
@@ -33,6 +37,9 @@ main {
   background-color: #5847eb;
   border-radius: 20px;
   height: 133px;
+  position: relative;
+  z-index: 5;
+  margin-bottom: 100px;
 }
 
 .profile__avatar {
@@ -54,5 +61,39 @@ main {
 
 .profile__name h1 {
   font-weight: 300;
+}
+
+.stat {
+  width: 328px;
+  height: 100px;
+  border-radius: 0 0 20px 20px;
+  position: absolute;
+  background-color: #1c1f4a;
+  z-index: 1;
+  top: 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.date-button {
+  border: none;
+  background-color: #1c1f4a;
+  color: #bdc1ff;
+  margin: 20px;
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.date-button:hover {
+  color: white;
 }
 /*# sourceMappingURL=main.css.map */
