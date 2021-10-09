@@ -13,10 +13,37 @@ body {
 main {
   margin: 75px auto;
   width: 328px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (min-width: 69.375em) {
+  main {
+    width: 1100px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (255px)[4];
+        grid-template-columns: repeat(4, 255px);
+    -ms-grid-rows: (245px)[2];
+        grid-template-rows: repeat(2, 245px);
+    gap: 35px;
+        grid-template-areas: "profile a b c" "profile d e f";
+  }
 }
 
 #profile {
   position: inherit;
+}
+
+@media screen and (min-width: 69.375em) {
+  #profile {
+    grid-area: profile;
+    margin: auto;
+  }
 }
 
 .profile {
@@ -39,7 +66,6 @@ main {
   height: 133px;
   position: relative;
   z-index: 5;
-  margin-bottom: 100px;
 }
 
 .profile__avatar {
@@ -63,14 +89,41 @@ main {
   font-weight: 300;
 }
 
+@media screen and (min-width: 69.375em) {
+  .profile {
+    width: unset;
+    height: unset;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-left: 35px;
+    padding-bottom: 60px;
+  }
+  .profile__avatar {
+    width: 78px;
+    height: 78px;
+    margin-bottom: 35px;
+  }
+  .profile__name h1 {
+    font-size: 2.25rem;
+  }
+}
+
 .stat {
   width: 328px;
   height: 100px;
   border-radius: 0 0 20px 20px;
-  position: absolute;
+  position: relative;
   background-color: #1c1f4a;
   z-index: 1;
-  top: 180px;
+  top: -2.1875rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -80,6 +133,23 @@ main {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+}
+
+@media screen and (min-width: 69.375em) {
+  .stat {
+    width: 255px;
+    height: 190px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
 }
 
 .date-button {
@@ -93,7 +163,226 @@ main {
   cursor: pointer;
 }
 
+@media screen and (min-width: 69.375em) {
+  .date-button {
+    margin: 0 0 20px 35px;
+  }
+}
+
 .date-button:hover {
   color: white;
+}
+
+.box {
+  position: inherit;
+}
+
+.box__image {
+  width: 328px;
+  height: 50px;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+  z-index: -4;
+  bottom: -20px;
+  border-radius: 20px 20px 0 0;
+}
+
+@media screen and (min-width: 69.375em) {
+  .box__image {
+    width: 255px;
+    height: 75px;
+  }
+}
+
+.box__image__work {
+  background-color: #ff8c66;
+}
+
+.box__image__play {
+  background-color: #56c2e6;
+}
+
+.box__image__study {
+  background-color: #ff5c7c;
+}
+
+.box__image__exercise {
+  background-color: #4acf81;
+}
+
+.box__image__social {
+  background-color: #7536d3;
+}
+
+.box__image__self-care {
+  background-color: #f1c65b;
+}
+
+.box__image--logo {
+  z-index: -5;
+  position: absolute;
+  right: 15px;
+  top: -8px;
+}
+
+.box__image--logo--work {
+  background: center/cover url(../../images/icon-work.svg) no-repeat;
+  height: 79px;
+  width: 79px;
+}
+
+.box__image--logo--play {
+  background: center/cover url(../../images/icon-play.svg) no-repeat;
+  height: 77px;
+  width: 76px;
+}
+
+.box__image--logo--study {
+  background: center/cover url(../../images/icon-study.svg) no-repeat;
+  height: 79px;
+  width: 79px;
+}
+
+.box__image--logo--exercise {
+  background: center/cover url(../../images/icon-exercise.svg) no-repeat;
+  height: 55px;
+  width: 81px;
+}
+
+.box__image--logo--social {
+  background: center/cover url(../../images/icon-social.svg) no-repeat;
+  height: 75px;
+  width: 100px;
+}
+
+.box__image--logo--self-care {
+  background: center/cover url(../../images/icon-self-care.svg) no-repeat;
+  height: 67px;
+  width: 67px;
+}
+
+.box__time {
+  height: 122px;
+  width: 328px;
+  background-color: #1c1f4a;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.box__time--left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 328px;
+  padding: 0 35px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.box__time--left h2 {
+  font-size: 1.0125rem;
+  font-weight: 500;
+}
+
+.box__time--left button {
+  border: none;
+  width: 21px;
+  height: 5px;
+  margin: 15px 0;
+  background: center/cover url(../../images/icon-ellipsis.svg) no-repeat;
+  cursor: pointer;
+}
+
+.box__time--right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 328px;
+  padding: 0 35px;
+}
+
+.box__time--right h3 {
+  margin: 0;
+  font-size: 1.575rem;
+}
+
+.box__time--right p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #bdc1ff;
+}
+
+@media screen and (min-width: 69.375em) {
+  .box__time {
+    width: 255px;
+    height: 200px;
+  }
+  .box__time--left {
+    width: 255px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 35px;
+  }
+  .box__time--left h2 {
+    font-size: 1.125rem;
+  }
+  .box__time--right {
+    width: 255px;
+    padding: 0 35px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .box__time--right h3 {
+    font-size: 3.375rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+  }
+  .box__time--right p {
+    margin-bottom: 20px;
+  }
+}
+
+.more-info:hover {
+  -webkit-filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(308deg) brightness(103%) contrast(101%);
+          filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(308deg) brightness(103%) contrast(101%);
 }
 /*# sourceMappingURL=main.css.map */
