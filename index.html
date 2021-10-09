@@ -30,9 +30,9 @@
       </div>
     
       <div class="stat">
-        <button class="date-button">Daily</button>
-        <button class="date-button">Weekly</button>
-        <button class="date-button">Monthly</button>
+        <button class="date-button" onclick="selectTime(0)">Daily</button>
+        <button class="date-button" onclick="selectTime(1)">Weekly</button>
+        <button class="date-button" onclick="selectTime(2)">Monthly</button>
       </div>
     </section>
   
@@ -44,8 +44,8 @@
           <button title="More Info" class="more-info"></button>
         </div>
         <div  class="box__time--right">
-          <h3>32hrs</h3>
-          <p>Last Week - 36hrs</p>
+          <h3 class="time-current">32hrs</h3>
+          <p class="time-previous">Last Week - 36hrs</p>
         </div>
       </div>
     </section>
@@ -58,8 +58,8 @@
           <button title="More Info" class="more-info"></button>
         </div>
         <div  class="box__time--right">
-          <h3>10hrs</h3>
-          <p>Last Week - 8hrs</p>
+          <h3 class="time-current">10hrs</h3>
+          <p class="time-previous">Last Week - 8hrs</p>
         </div>
       </div>
     </section>
@@ -72,8 +72,8 @@
           <button title="More Info" class="more-info"></button>
         </div>
         <div  class="box__time--right">
-          <h3>4hrs</h3>
-          <p>Last Week - 7hrs</p>
+          <h3 class="time-current">4hrs</h3>
+          <p class="time-previous">Last Week - 7hrs</p>
         </div>
       </div>
     </section>
@@ -86,8 +86,8 @@
           <button title="More Info" class="more-info"></button>
         </div>
         <div  class="box__time--right">
-          <h3>4hrs</h3>
-          <p>Last Week - 5hrs</p>
+          <h3 class="time-current">4hrs</h3>
+          <p class="time-previous">Last Week - 5hrs</p>
         </div>
       </div>
     </section>
@@ -100,8 +100,8 @@
           <button title="More Info" class="more-info"></button>
         </div>
         <div  class="box__time--right">
-          <h3>5hrs</h3>
-          <p>Last Week - 10hrs</p>
+          <h3 class="time-current">5hrs</h3>
+          <p class="time-previous">Last Week - 10hrs</p>
         </div>
       </div>
     </section>
@@ -114,62 +114,18 @@
           <button title="More Info" class="more-info"></button>
         </div>
         <div  class="box__time--right">
-          <h3>2hrs</h3>
-          <p>Last Week - 2hrs</p>
+          <h3 class="time-current">2hrs</h3>
+          <p class="time-previous">Last Week - 2hrs</p>
         </div>
       </div>
     </section>
     
-<!--     
-5hrs daily
-    Previous - 7hrs daily 
-    103hrs monthly 
-    Previous - 128hrs monthly 
-  
-    Play
-    1hr  daily 
-    Previous - 2hrs daily 
 
-    23hrs monthly
-    Previous - 29hrs monthly 
-  
-    Study
-    0hrs  daily
-    Previous - 1hr daily 
-    4hrs weekly 
-    Previous - 7hrs weekly 
-    13hrs monthly 
-    Previous - 19hrs monthly 
-  
-    Exercise
-    1hr daily 
-    Previous - 1hr daily 
-    4hrs weekly 
-    Previous - 5hrs weekly 
-    11hrs monthly 
-    Previous - 18hrs monthly 
-  
-    Social
-    1hr daily 
-    Previous - 3hrs  daily 
-    5hrs weekly 
-    Previous - 10hrs weekly 
-    21hrs monthly 
-    Previous - 23hrs monthly 
-  
-    Self Care
-    0hrs daily 
-    Previous - 1hr daily 
-    2hrs weekly 
-    Previous - 2hrs weekly 
-    7hrs monthly 
-    Previous - 11hrs monthly 
-  
-     -->
 </main>
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://www.frontendmentor.io/profile/TiredQuan" target="_blank">Tired Quan</a>.
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
